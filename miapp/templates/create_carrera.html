@@ -1,0 +1,29 @@
+{%extends 'layout.html'%}
+{% block title %}
+    Crear Nueva Carrera
+{% endblock %}
+
+{% block content %}
+    
+    <h1 class="title">Formulario en Django</h1>
+    <form action="/save-carrera/" class="form-group" method="GET">
+        <label for="idcarrera">Id Carrera: </label>
+        <input type="text" name="idcarrera">
+
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre">
+
+        <label for="nombrecorto">Nombre Corto: </label>
+        <input type="text" name="nombrecorto">
+
+        <label for="fechafundacion">Fecha de Fundacion </label>
+        <input type="text" name="fechafundacion">
+
+        <label for="estado">Estado </label>
+        <input type="text" name="estado">
+
+        
+
+        <input type="submit" value="Agregar">
+    </form>
+{% endblock %}

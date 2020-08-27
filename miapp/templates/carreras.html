@@ -1,0 +1,26 @@
+{%extends 'layout.html'%}
+{% block title %}
+    {{titulo}}
+{% endblock %}
+
+{% block content %}
+    
+    <h1 class="title">Listado de Carreras</h1>
+    <ul>
+        
+            {%for carrera in carreras %}
+                <li>
+                    <h4>
+                        {{carrera.id}} - {{carrera.nombre}}
+                    </h4>
+                
+                <strong>Estado: {{carrera.estado}}</strong>
+                
+                
+                <a href="{% url 'eliminar_carreras' id=carrera.idcarrera %}">Eliminar Carrera</a>
+                </p>
+                </li>
+            {% endfor %}
+    </ul>
+    <a href="{% url 'agregar_carrera'%}" class="btn btn-success">Agregar Carrera</a>
+{% endblock %}

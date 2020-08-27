@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+{% block title %}
+    {{titulo}}
+{% endblock%}
+
+{% block content %}
+<h1>Consultas y comentarios</h1>
+<form action="/save-articulo/" class="form-group" method="GET">
+        <label for="nombre">Nombre: </label><br>
+        <input type="text" name="Nombre">
+
+        <label for="email">E-mail: </label><br>
+        <input type="email" name="email"><br><br>
+
+
+        <label for="sexo">Sexo: </label>
+        <div class="input__row">
+        <ul class="buttons">
+        
+        <li>
+        <input class="radiobtn" type="radio"  id="m" name="sexo" value="masculino" tabindex="1"><span></span>
+        <label for="m">Masculino</label>
+        </li>
+        <li>
+        <input class="radiobtn" type="radio"  id="f" name="sexo" value="femenino" tabindex="2"><span></span>
+        <label for="f">Femenino</label><br><br>
+        </li>
+        </ul>
+        </div>
+
+
+        <label for="consulta">Consulta: </label>
+        <textarea type="consulta" name="consulta"></textarea>
+
+        <input type="submit" value="Agregar">
+</form>
+
+
+{% endblock%}

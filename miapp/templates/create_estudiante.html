@@ -1,0 +1,38 @@
+{%extends 'layout.html'%}
+{% block title %}
+    Crear Nuevo Estudiante
+{% endblock %}
+
+{% block content %}
+    
+    <h1 class="title">Formulario en Django</h1>
+    <form action="/save-estudiante/" class="form-group" method="GET">
+        <label for="idestudiante">Id Estudiante: </label>
+        <input type="text" name="idestudiante">
+
+        <label for="codigo">Codigo: </label>
+        <input type="text" name="codigo">
+
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre">
+
+        <label for="apellidos">Apellidos: </label>
+        <input type="text" name="apellidos">
+
+        <label for="dni">DNI: </label>
+        <input type="text" name="dni">
+
+        <label for="direccion">Direccion: </label>
+        <input type="text" name="direccion">
+
+        <label for="fechanacimiento">Fecha de Nacimiento: </label>
+        <input type="text" name="fechanacimiento">
+
+        <label for="estado">Estado </label>
+        <input type="text" name="estado">
+
+        
+
+        <input type="submit" value="Agregar">
+    </form>
+{% endblock %}
